@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Board.</h2>
+        <nav>
+            <a href="#" class="active">
+                <img src="https://img.icons8.com/?size=100&id=A5Cqe5iw1NPK&format=png&color=000000" alt="Dashboard" width="30" height="30" style="margin-bottom: -10px;"> Dashboard
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=pDAhA18v9AXr&format=png&color=000000" alt="Dashboard" width="25" height="25" style="margin-bottom: -5px;"> Transactions
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=8Cm91HvffxFH&format=png&color=000000" alt="Dashboard" width="25" height="25" style="margin-bottom: -5px;"> Schedules
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=4V1nG4SioGjp&format=png&color=000000" alt="Dashboard" width="25" height="25" style="margin-bottom: -5px;"> Users
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=wNlvNTF0kjUg&format=png&color=000000" alt="Dashboard" width="25" height="25" style="margin-bottom: -5px;"> Settings
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#">Help</a><br>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="search-profile">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <img src="https://img.icons8.com/?size=100&id=11642&format=png&color=000000" alt="Notification" class="notification-icon">
+            <img src="https://img.icons8.com/?size=100&id=492ILERveW8G&format=png&color=000000" alt="Notification" class="notification-icon">
+        </div>
+        </header>
+        <section class="stats">
+            <div class="stat-card">
+                <img src="https://img.icons8.com/?size=100&id=13561&format=png&color=000000" 
+                     alt="Total Revenues Icon" 
+                     class="stat-icon">
+                <div class="stat-info">
+                    <p>Total Revenues</p>
+                    <h3>$2,129,430</h3>
+                    <span>+2.5%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <img src="https://img.icons8.com/?size=100&id=46775&format=png&color=000000" 
+                     alt="Total Transactions Icon" 
+                     class="stat-icon">
+                <div class="stat-info">
+                    <p>Total Transactions</p>
+                    <h3>1,520</h3>
+                    <span>+1.7%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <img src="https://img.icons8.com/?size=100&id=HLJKvAzU3QNP&format=png&color=000000" 
+                     alt="Total Likes Icon" 
+                     class="stat-icon">
+                <div class="stat-info">
+                    <p>Total Likes</p>
+                    <h3>9,721</h3>
+                    <span>+1.4%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <img src="https://img.icons8.com/?size=100&id=pGJ9az9ImstN&format=png&color=000000" 
+                     alt="Total Users Icon" 
+                     class="stat-icon">
+                <div class="stat-info">
+                    <p>Total Users</p>
+                    <h3>9,721</h3>
+                    <span>+4.2%</span>
+                </div>
+            </div>
+        </section>
+        <div class="grid-container-1">
+        <div class="chart-title">Activities</div>
+        <div class="chart-subtitle">May - June 2024</div>
+        <canvas id="activityChart"></canvas>
+        </div>
+        <div class="grid-container-2">
+            <!-- Header for Title and Date -->
+            <div class="chart-header">
+                <div class="chart-title">Top Products</div>
+                <div class="chart-date">May - June 2021</div>
+            </div>
+        
+            <!-- Content with Chart and Legend -->
+            <div class="chart-content">
+                <!-- Chart section -->
+                <div class="chart-wrapper">
+                    <canvas id="productChart"></canvas>
+                </div>
+        
+                <!-- Legend section -->
+                
+            </div>
+        </div>
+        <div class="grid-container-3">
+            <div class="add-profile-button" onclick="openModal()">Add Profile</div>
+        
+            <!-- Modal Structure -->
+            <div id="addProfileModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Add New Profile</h2>
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'basic')">Basic</button>
+                        <button class="tab-button" onclick="openTab(event, 'social')">Social</button>
+                    </div>
+                    <div id="basic" class="tab-content active">
+                        <label for="name">Enter Name*</label>
+                        <input type="text" id="name" placeholder="Eg. John Doe" />
+        
+                        <label for="email">Enter Email*</label>
+                        <input type="email" id="email" placeholder="Eg. John@xyz.com" />
+        
+                        <label for="phone">Enter Phone*</label>
+                        <input type="tel" id="phone" placeholder="Eg. 9123456789" />
+                    </div>
+                    <div id="social" class="tab-content">
+                        <label for="instagram">Instagram Link (Optional)</label>
+                        <input type="text" id="instagram" placeholder="Eg..instagram.com/username" />
+        
+                        <label for="youtube">YouTube Link (Optional)</label>
+                        <input type="text" id="youtube" placeholder="Eg..youtube.com/username" />
+                    </div>
+                    <div class="modal-footer">
+                        <button class="back-button" onclick="closeModal()">Back</button>
+                        <button id="next-done-button" onclick="nextOrDone()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

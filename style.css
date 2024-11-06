@@ -1,0 +1,153 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fc;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    background-color: #E0B844;
+    color: white;
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.left-panel .logo {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 170px;
+}
+
+
+.left-panel h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.left-panel .social-icons a {
+    margin: 10px;
+    display: grid;
+    margin-right: 300px;
+}
+
+.right-panel {
+    flex: 1.5;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.social-signin button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    background-color: #FFD966;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 20px; /* Adjust the value for more or less rounding */
+
+}
+
+.social-signin button:first-child {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 0.9em;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border-radius: 20px; /* Adjust the value for more or less rounding */
+
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #FFD966;
+    text-decoration: none;
+}
+
+.sign-in-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #FFD966;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+.sign-in-btn:hover {
+    background-color: #FFD966;
+}
+
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.register-link a {
+    color: #FFD966;
+    text-decoration: none;
+    font-weight: 500;
+}
